@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
     <link rel="stylesheet" href="./css/all.css">
+   
+
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
     <nav class="nav">
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a href="#" class="text-gray">Portfolio</a>
+                <a href="#" class="text-gray">Portfolio.</a>
             </div>
             <div class="toggle-collapse">
                 <div class="toggle-icons">
@@ -27,10 +30,13 @@
                        <a href="#">Home</a>
                    </li> 
                    <li class="nav-link">
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                 </li> 
                 <li class="nav-link">
-                    <a href="#">Gallery</a>
+                    <a href="#hobbies">Hobbies</a>
+                </li> 
+                <li class="nav-link">
+                    <a href="#gallery">Gallery</a>
                 </li> 
                 <li class="nav-link">
                     <a href="#">Work</a>
@@ -41,15 +47,118 @@
                 </ul>
             </div>
             <div class="social text-gray">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/irena.3Bit/" target="_Blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/irena_3bit/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/irena-zbitkovska-88b473206/" target="_Blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Irena3Z" target="_Blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </nav>
 
 <!--------x------Navigation---x--------->
+
+<!---------Main Site Section---------->
+<main class="site-main">
+
+<section class="site-title">
+    <div class="site-background">
+        <h3>Portfolio by</h3>
+        <h1>Irēna Zbitkovska</h1>
+        <button class="btn">Let's check</button>
+
+    </div>
+</section>
+
+<section id="about" class="site-about" >
+    <div class="main_container">
+    <div class="my_image">
+        <img src="./assets/home/IMG_5369.JPEG" alt="my_image" width="360">
+    </div>
+    <div class="about_my">
+        <h2>Hey I' m
+             Irēna 
+        </h2>
+       
+        <h4>Next Front-end Developer</h4>
+        <p>I am currently working as a manager, serving legal clients.I believe I will work as a programmer tomorrow.
+            Each of us uses technology a lot every day, and so do I. But despite that, I really enjoy spending time in nature.. 
+            I am very active, I enjoy both long walks and fishing. 
+            In the summer I spend my holidays in a tent or on a long car trip.. But if it rains outside, I also have a passion at home. Then it's time to draw. I paint both portraits and landscapes. 
+            Or spend time watching a new series..
+        </p>
+    </div>
+    </div>
+</section>
+
+
+<section id="hobbies">
+    <div class="blog">
+        <div class="container">
+            <h1>How do i spend my free time</h1>
+            <div class="owl-carousel owl-theme blog-post">
+                <div class="blog-content">
+                    <img src="./assets/home/aus.jpg" alt="" width="350">
+                    <div class="blog-title">
+                        <h3>Trevel</h3>
+                        <h5>I like to travel .. at the moment I have been to Germany, the Czech Republic, Austria, Poland, Lithuania and Estonia.</h5>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <img src="./assets/home/IMG_8508.JPG" alt="" width="350">
+                    <div class="blog-title">
+                        <h3>Photograph</h3>
+                        <h5>You can enjoy a moment twice, the first time you're there, the second time you're looking at photos.</h5>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <img src="./assets/home/walking.jpg" alt="" width="350">
+                    <div class="blog-title">
+                        <h3>Walk</h3>
+                        <h5>I like to spend my free time in nature. One night I walked even <b>50 km!</b> </h5>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <img src="./assets/home/color.jpg" alt="" width="300">
+                    <div class="blog-title">
+                        <h3>Draw</h3>
+                        <h5>I spend my free time drawing. There will soon be no free space on the walls..</h5>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <img src="./assets/home/roler.jpg" alt="" width="350">
+                    <div class="blog-title">
+                        <h3>Rollerskating</h3>
+                        <h5>These are my second shoes in my summer time</h5>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <img src="./assets/home/movie.jpg" alt="" width="300">
+                    <div class="blog-title">
+                        <h3>Cinema evening</h3>
+                        <h5>This is already a tradition. Every last day of the month we have a movie night with my best friend.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-navigation">
+                <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+
+<!------x-----Main Site Section--------x-->
+
+<script src="./js/jquery3.6.0.min.js"></script>
+
+<script src="./js/owl.carousel.min.js"></script>
+
+
     <script src="./js/main.js"></script>
 </body>
 </html>

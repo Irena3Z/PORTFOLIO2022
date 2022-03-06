@@ -13,6 +13,8 @@ html, body{
     --midnight:#104f55;
 
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
 
 
     --Abel:'Abel',cursive;
@@ -32,7 +34,38 @@ a{
 }
 ul{
     list-style-type: none;
+}
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--Lexend); 
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+h4{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding:1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor:pointer;
+}
+p{
 
+    font-family: var(--Lexend);
+}
+
+.container{
+    padding-top: 2rem;
+    margin: 0rem 5vw;
 }
 
 .nav{
@@ -41,6 +74,7 @@ ul{
     height: 0rem;
     min-height: 10vh;
     overflow: hidden;
+    transition: height 1s ease-in-out;
 
 }
 .nav .nav-menu{
@@ -64,7 +98,7 @@ ul{
 
 }
 .collapse{
-    height:30rem;
+    height:37rem;
 }
 
 .nav .nav-items{
@@ -105,6 +139,132 @@ ul{
     color:#93b5c0
 }
 
+main .site-title{
+    background: url(../assets/home/backgraundimg.jpg);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color:var(--white);
+}
+main .site-title  h1, h3{
+    margin: .3rem;
+}
+main .site-title .btn{
+    margin: 1.8rem ;
+    background: var(--sky);
+
+} 
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color:var(--white);
+}
+
+main .blog{
+    background: url(../assets/home/flov.jpg);
+    background-size: cover;
+    width: 100%;
+
+}
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgb(0, 0, 0, 0.2);
+
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+
+}
+h5{
+    font-family: var(--Livvic);
+}
+
+.main_container{
+    display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   
+   background: #131a1b;
+}
+.my_image{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+ 
+}
+.my_image img{
+    border-radius: 2rem;
+    max-width: 100%;
+}
+
+.about_my{
+    display: flex;
+   flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    background: #131a1b;
+
+}
+.about_my *{
+ color: var(--white);
+ 
+
+}
+.about_my p{
+    font-family: var(--Lexend);
+    font-size: 1rem;
+    max-width:430px;
+    min-width: 250px;
+    margin: 0 3px;
+    padding: 0 2rem;
+    text-align:justify;
+    
+}
+section .container .owl-nav{
+    position: absolute;
+    top:3%;
+    margin: 0;
+    width: 100%;
+}
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+.owl-theme .owl-nav [class*='owl-']:hover{
+background: transparent;
+color: var(--midnight);
+}
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+@media screen and (max-width:1050px){
+    .about_my{
+        padding: 3rem 1rem ;
+    
+    }
+    .my_image{
+        padding: 2rem;
+        min-width: 350px;
+     
+    }
+
+}
 @media screen and (max-width:750px){
     .nav .nav-menu, .nav .nav-items{
         flex-direction: column;
@@ -113,4 +273,9 @@ ul{
     .nav .toggle-collapse{
         display: initial;
     }
+    .about_my{
+        padding-top: 2rem ;
+    
+    }
+
 }
