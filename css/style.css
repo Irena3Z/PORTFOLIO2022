@@ -1,5 +1,9 @@
 @import url('../css/fonts.css');
 
+
+html {
+    scroll-behavior: smooth;
+  }
 html, body{
     margin: 0%;
     box-sizing: border-box;
@@ -37,18 +41,23 @@ ul{
 }
 h1{
     font-family: var(--Lexend);
-    font-size: 2.5rem;
+    font-size: 10vh;
 }
 h2{
+    font-size: 7vh;
     font-family: var(--Lexend); 
 }
 h3{
     font-family: var(--Abel);
-    font-size: 1.3rem;
+    font-size: 4vh;
 }
 h4{
     font-family: var(--Abel);
-    font-size: 1.3rem;
+    font-size: 3vh;
+}
+h5{
+    font-family: var(--Livvic);
+    font-size: 2vh;
 }
 button.btn{
     border: none;
@@ -59,7 +68,7 @@ button.btn{
     cursor:pointer;
 }
 p{
-
+font-size: 3vh;
     font-family: var(--Lexend);
 }
 
@@ -142,7 +151,7 @@ p{
 main .site-title{
     background: url(../assets/home/backgraundimg.jpg);
     background-size: cover;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -188,46 +197,51 @@ main .blog-content .blog-title{
     padding: 2rem 0;
 
 }
-h5{
-    font-family: var(--Livvic);
-}
+
 
 .main_container{
     display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   
+   flex-direction: row;
+   flex-wrap: nowrap;
    background: #131a1b;
+   padding-bottom: 2.7rem;
+  
 }
 .my_image{
     display: flex;
     align-items: center;
     padding: 2rem;
+    margin-left: 20px;
  
 }
 .my_image img{
     border-radius: 2rem;
-    max-width: 100%;
+    max-width: 70vh;
+    min-height: 350px;
+   
 }
 
-.about_my{
+.about_me{
     display: flex;
+    justify-content: flex-start;
    flex-direction: column;
     text-align: center;
     box-sizing: border-box;
     background: #131a1b;
+ 
+    padding: 2rem;
 
 }
-.about_my *{
+.about_me *{
  color: var(--white);
  
 
 }
-.about_my p{
+.about_me p{
     font-family: var(--Lexend);
-    font-size: 1rem;
-    max-width:430px;
-    min-width: 250px;
+    font-size: 3vh;
+   font-display: flex;
+   justify-content: flex-start;
     margin: 0 3px;
     padding: 0 2rem;
     text-align:justify;
@@ -252,19 +266,97 @@ color: var(--midnight);
 .owl-theme .owl-nav [class*='owl-']{
     outline: none;
 }
+#work{
+    background: #ecebeb;
+}
+.work_title{
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    font-size: 10vh;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+.work_card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding:0 2rem;
+    margin: auto;
+    
+}
+.company{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 1rem ;
+    max-width: 700px;
+    min-width: 300px;
+    margin-right: 20px;
+    align-items: stretch;
+}
+span{
+    padding-left: 0.3rem;
+    font-size: 2.7vh;
+}
+.work_card p{
+    box-sizing: border-box;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 20px;
+    padding-bottom: 1rem;
+    
+ 
+    
+}
 
 @media screen and (max-width:1050px){
-    .about_my{
-        padding: 3rem 1rem ;
     
-    }
-    .my_image{
+    .my_image {
         padding: 2rem;
-        min-width: 350px;
      
     }
-
+    .my_image img{
+        border-radius: 2rem;
+        max-width: 50vh;
+        min-height: 350px;
+       
+    }
+    .about_me{
+        padding: 2rem ;
+        width:100vh;
+        box-sizing: border-box;
+    
+    }
+    .main_container{
+        display: flex;
+       flex-direction: row;
+       flex-wrap:nowrap;
+       background: #131a1b;
+       padding-bottom: 2.7rem;
+       
+      
+    }
 }
+@media screen and (max-width:910px){
+    .about_me{
+        padding: 1rem ;
+        width:100vh;
+        box-sizing: border-box;
+    
+    }
+    .main_container{
+        display: flex;
+       justify-content: center;
+       flex-wrap:wrap;
+       background: #131a1b;
+       padding-bottom: 2.7rem;
+    
+    }
+}
+
 @media screen and (max-width:750px){
     .nav .nav-menu, .nav .nav-items{
         flex-direction: column;
@@ -273,9 +365,47 @@ color: var(--midnight);
     .nav .toggle-collapse{
         display: initial;
     }
-    .about_my{
-        padding-top: 2rem ;
+    .about_me{
+        padding: 0.4rem ;
+        width:100vh;
+        box-sizing: border-box;
     
     }
+    .my_image img{
+        border-radius: 2rem;
+        margin: 0 auto;
+        padding: 1rem;
+        min-width: 40vh
+    }
+    .company{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+    .work_card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      
+        
+    }
+    .main_container{
+        display: flex;
+       justify-content: center;
+       flex-wrap:wrap;
+       background: #131a1b;
+       padding-bottom: 1.7rem;
+       padding: 1rem ;
+    }
+}
 
+@media screen and (max-width:450px){
+    .my_image img{
+        border-radius: 2rem;
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 33vh;
+        min-height:30vh;
+    }
 }
