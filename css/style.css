@@ -8,6 +8,7 @@ html, body{
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
+    background: #ecebeb;
 }
 :root{
     --text-gray: #3f4954;
@@ -35,6 +36,10 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+label{
+    font-family: var(--Abel);
+    font-size: 4vh;
 }
 ul{
     list-style-type: none;
@@ -149,7 +154,7 @@ font-size: 3vh;
 }
 
 main .site-title{
-    background: url(../assets/home/backgraundimg.jpg);
+    background: url(../assets/home/title2.jpg);
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -266,6 +271,9 @@ color: var(--midnight);
 .owl-theme .owl-nav [class*='owl-']{
     outline: none;
 }
+#gallery{
+    background: #ecebeb;
+}
 #work{
     background: #ecebeb;
 }
@@ -273,7 +281,6 @@ color: var(--midnight);
     margin-top: 0;
     margin-bottom: 30px;
     padding-top: 40px;
-    font-size: 10vh;
     padding-left: 2rem;
     padding-bottom: 1rem;
 }
@@ -305,12 +312,167 @@ span{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-left: 20px;
-    padding-bottom: 1rem;
     
+    padding-bottom: 1rem;
+    border-spacing: 20px;
  
     
 }
+.work_skills{
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.grid-container{
+    margin: 2px auto;
+    padding-right: 5rem;
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ 
+}
+.grid-item {
+    padding: 20px 40px;
+    margin: 0;
+ display: flex;
+ flex-wrap: wrap;
+ 
+    text-align: center;
+}
+.cards_position{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-spacing: 15px;
+
+}
+.card{
+    background-color: #ddd2d2;
+    padding: 7px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 7px;
+    box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
+}
+
+.card:hover {
+  background-color: #73998cb7;
+  padding: 7px;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
+  text-decoration-color: #b6beb9;
+}
+.card img{
+    max-width: 350px;
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+.projects 
+{background-color: #5c6962;
+    margin: 0;
+    padding: 40px 0;
+}
+
+#contact{
+    margin-top: 0cm;
+    padding-left: 2rem;
+    background: url(../assets/home/jas.jpg);
+    background-size: cover;
+    height:100%;
+}
+.contact_card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding:2rem 1rem ;
+
+}
+.social_info> *{
+    box-sizing: border-box;
+    max-width: 500px; 
+}
+.social_info span{
+    font-size: 4vh;
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+  
+}
+.contact_card div a{
+    font-size: 6vh;
+  box-sizing: border-box;
+    padding: 1rem;
+}
+.contact_card  i:hover{
+    color:#93b5c0
+}
+.contact_card .social_info div {
+    font-size: 5vh;
+  box-sizing: border-box;
+    padding: 2rem;
+
+
+}
+.send_message{
+    box-sizing: border-box;
+
+  margin: 10px 0;
+ 
+  width: 700px;
+  
+}
+input[type=text], select, textarea{
+    width: 100%;
+ background-color: #d6ebec4b;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    
+  }
+  label {
+    padding: 12px 12px 12px 0;
+    
+  }
+  input[type=submit] {
+    background-color:var(--midnight);
+    color: var(--white);
+    padding: 12px 70px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+  }
+  input[type=submit]:hover{
+    background-color:rgba(87, 145, 102, 0.603);
+}
+  .col-25 {
+    float: center;
+    width: 25%;
+    margin-top: 6px;
+  }
+  .col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 0.5rem;
+    
+  }
 
 @media screen and (max-width:1050px){
     
@@ -355,6 +517,11 @@ span{
        padding-bottom: 2.7rem;
     
     }
+    .contact_card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width:750px){
@@ -390,6 +557,9 @@ span{
       
         
     }
+    .work_card p{
+        margin-left: 2rem;
+    }
     .main_container{
         display: flex;
        justify-content: center;
@@ -407,5 +577,53 @@ span{
         padding: 1rem;
         max-width: 33vh;
         min-height:30vh;
+    }
+    .work_card p{
+        margin-left: 1rem;
+       
+    }
+    h1{
+        font-family: var(--Lexend);
+        font-size: 7vh;
+    }
+    h2{
+        font-size: 6vh;
+        font-family: var(--Lexend); 
+    }
+    h3{
+        font-family: var(--Abel);
+        font-size: 3vh;
+    }
+    h4{
+        font-family: var(--Abel);
+        font-size: 2vh;
+    }
+    h5{
+        font-family: var(--Livvic);
+        font-size: 1vh;
+    }
+    button.btn{
+        border: none;
+        border-radius: 2rem;
+        padding:1rem 3rem;
+        font-size: 1rem;
+        font-family: var(--Livvic);
+        cursor:pointer;
+    }
+    p{
+    font-size: 2vh;
+        font-family: var(--Lexend);
+    }
+
+    .social_info span{
+        font-size: 3vh;
+        box-sizing: border-box;
+        padding-bottom: 2rem;
+      
+    }
+    .contact_card div a{
+        font-size: 4vh;
+      box-sizing: border-box;
+        padding: 1rem;
     }
 }
