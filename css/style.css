@@ -208,7 +208,7 @@ main .blog-content .blog-title{
     display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
-   background: #131a1b;
+   background: #141510;
    padding-bottom: 2.7rem;
   
 }
@@ -232,7 +232,7 @@ main .blog-content .blog-title{
    flex-direction: column;
     text-align: center;
     box-sizing: border-box;
-    background: #131a1b;
+  
  
     padding: 2rem;
 
@@ -273,7 +273,86 @@ color: var(--midnight);
 }
 #gallery{
     background: #ecebeb;
+  
+
 }
+#gallery h1{
+    padding-left: 2.1rem;
+  
+}
+.photo_container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    padding: 0.5rem;
+  
+
+}
+.gallery_item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+ 
+}
+.gallery_item .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery_item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: 5s ease-in-out;
+}
+.gallery_item:hover .image img{
+    transform: scale(1.5);
+}
+
+
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-7{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+}
+
+
 #work{
     background: #ecebeb;
 }
@@ -353,16 +432,17 @@ span{
 
 }
 .card{
-    background-color: #ddd2d2;
+    background-color: #ddd2d277;
     padding: 7px;
     text-align: center;
     margin: 20px;
     border-radius: 7px;
     box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
+    contain: 100%;
 }
 
 .card:hover {
-  background-color: #73998cb7;
+  background-color: #8fd4bc80;
   padding: 7px;
   text-align: center;
   margin: 20px;
@@ -374,20 +454,18 @@ span{
     padding: 0.5rem;
     border-radius: 20px;
 }
-.projects 
-{background-color: #5c6962;
-    margin: 0;
-    padding: 40px 0;
-}
+
 
 #contact{
-    margin-top: 0cm;
+    padding-top: 2rem;
+    margin-top: 2rem;
     padding-left: 2rem;
     background: url(../assets/home/jas.jpg);
     background-size: cover;
     height:100%;
 }
 .contact_card{
+    
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -568,6 +646,9 @@ input[type=text], select, textarea{
        padding-bottom: 1.7rem;
        padding: 1rem ;
     }
+    .photo_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media screen and (max-width:450px){
@@ -625,5 +706,15 @@ input[type=text], select, textarea{
         font-size: 4vh;
       box-sizing: border-box;
         padding: 1rem;
+    }
+    .photo_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+     .w-1,.w-2,.w-3,.w-4,.w-5,.w-6 {
+        grid-column: span 1;
+        }
+
+        
     }
 }
