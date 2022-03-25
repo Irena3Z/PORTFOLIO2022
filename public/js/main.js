@@ -14,3 +14,32 @@ $('.owl-carousel').owlCarousel({
     nav: true,
     navText: [$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')]
 });
+
+const req = new Request();
+
+req.get('api.php?name=getSubscribers', function (response) {
+    for (let subscriber of response.subscribers) {
+        printSubscriber(subscriber)
+    }
+})
+
+document.querySelector('form').onsubmit = function(event) {
+    event.preventDefault()
+    // if(document.getElementById('subscription_check').checked) {
+    //     const url = this.getAttribute('action')
+    //     let form = this;
+    //     req.post(url, new FormData(this), function (response) {
+    //         if (response.hasOwnProperty('entity')) {
+    //             printSubscriber(response.entity)
+    //             for (let input of form.querySelectorAll('input')) {
+    //                 input.value = ''
+    //                 input.checked = false
+    //             }
+    //             document.getElementById('message').textContent = ''
+    //         }
+    //     })
+    // }
+    // else {
+    //     document.getElementById('message').textContent = "please check the checkbox!"
+    // }
+}
