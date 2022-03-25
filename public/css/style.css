@@ -226,30 +226,24 @@ main .blog-content .blog-title{
    
 }
 
-
 .about_me{
     display: flex;
     justify-content: flex-start;
-   flex-direction: column;
+    flex-direction: column;
     text-align: center;
     box-sizing: border-box;
-  
- 
     padding: 2rem;
-
 }
 .about_me *{
- color: var(--white);
+    color: var(--white);
  
 
 }
 .about_me p{
     font-family: var(--Lexend);
-    font-size: 3vh;
-   font-display: flex;
-   justify-content: flex-start;
+    font-display: flex;
+    justify-content: flex-start;
     margin: 0 3px;
-    padding: 0 2rem;
     text-align:justify;
     
 }
@@ -274,12 +268,129 @@ color: var(--midnight);
 }
 #gallery{
     background: #ecebeb;
+
   
 
 }
 #gallery h1 , h3{
     padding-left: 2.1rem;
   
+}
+.gallery_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 10px;
+}
+.wrapper{
+    max-width: 1150vh;
+
+}
+.wrapper .gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.gallery .image{
+    padding: 7px;
+width: calc(94% / 3) ;
+}
+.gallery .image img{
+    width: 100% ;
+vertical-align: middle;
+transition: all 0.3s ease;
+}
+
+.gallery .image:hover img{
+    transform: scale(1.1);
+
+}
+.preview-box{
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    top: 50%;
+    left:50%;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(0.9);
+    background:rgb(241, 237, 237) ;
+    padding: 0 5px 5px 5px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.2)
+
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+.preview-box .details .icon{
+    color:var(--midnight) ;
+    cursor: pointer;
+    font-size:20px;
+}
+.details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+.details .title p{
+    margin: 0 5px;
+
+}
+.details .title p.current-img{
+    font-weight: 500 ;
+}
+.preview-box .img-box{
+    display: flex;
+    width: 100%;
+}
+.img-box .slide{
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.img-box .slide.prev{
+    left: 0;
+}
+.img-box .slide.next{
+    right: 0;
+}
+
+.preview-box .img-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+section .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: rgba(0,0,0,0.4);
 }
 
 #work{
@@ -509,6 +620,9 @@ input[type=text], select, textarea{
        
       
     }
+    .gallery .image{
+        width: calc(94% / 2);
+    }
 }
 @media screen and (max-width:910px){
     .about_me{
@@ -578,6 +692,13 @@ input[type=text], select, textarea{
     }
    
 }
+@media screen and (max-width:500px){
+    .gallery .image{
+        padding: 4px;
+        width: 100%;
+    }
+}
+
 
 @media screen and (max-width:450px){
     .my_image img{
