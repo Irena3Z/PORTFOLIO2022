@@ -1,4 +1,4 @@
-@import url('../public/css/fonts.css');
+@import url('../css/fonts.css');
 
 
 html {
@@ -62,6 +62,8 @@ h4{
 h5{
     font-family: var(--Livvic);
     font-size: 2vh;
+    padding: 3px;
+    
 }
 button.btn{
     border: none;
@@ -73,6 +75,10 @@ button.btn{
 }
 p{
 font-size: 3vh;
+    font-family: var(--Lexend);
+}
+span{
+    font-size: 3vh;
     font-family: var(--Lexend);
 }
 
@@ -259,8 +265,8 @@ section .container .owl-nav{
     font-size: 2rem;
 }
 .owl-theme .owl-nav [class*='owl-']:hover{
-background: transparent;
-color: var(--midnight);
+    background: transparent;
+    color: var(--midnight);
 }
 .owl-theme .owl-nav [class*='owl-']{
     outline: none;
@@ -297,12 +303,12 @@ color: var(--midnight);
 }
 .gallery .image{
     padding: 7px;
-width: calc(94% / 3) ;
+    width: calc(94% / 3) ;
 }
 .gallery .image img{
     width: 100% ;
-vertical-align: middle;
-transition: all 0.3s ease;
+    vertical-align: middle;
+    transition: all 0.3s ease;
 }
 
 .gallery .image:hover img{
@@ -404,7 +410,7 @@ section .shadow{
 }
 .work_card{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     padding:0 2rem;
     margin: auto;
@@ -419,9 +425,8 @@ section .shadow{
     margin-right: 20px;
     align-items: stretch;
 }
-span{
-    padding-left: 0.3rem;
-    font-size: 2.7vh;
+.year{
+    padding-left: 2.5rem;
 }
 .work_card p{
     box-sizing: border-box;
@@ -457,9 +462,8 @@ span{
 .grid-item {
     padding: 20px 40px;
     margin: 0;
- display: flex;
- flex-wrap: wrap;
- 
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
 }
 .cards_position{
@@ -481,12 +485,12 @@ span{
 }
 
 .card:hover {
-  background-color: #8fd4bc80;
-  padding: 7px;
-  text-align: center;
-  margin: 20px;
-  box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
-  text-decoration-color: #b6beb9;
+    background-color: #8fd4bc80;
+    padding: 7px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
+    text-decoration-color: #b6beb9;
 }
 .card img{
     max-width: 350px;
@@ -525,7 +529,7 @@ span{
 }
 .contact_card div a{
     font-size: 6vh;
-  box-sizing: border-box;
+    box-sizing: border-box;
     padding: 1rem;
 }
 .contact_card  i:hover{
@@ -533,63 +537,62 @@ span{
 }
 .contact_card .social_info div {
     font-size: 5vh;
-  box-sizing: border-box;
+    box-sizing: border-box;
     padding: 2rem;
-
-
 }
+
 .send_message{
     box-sizing: border-box;
-
-  margin: 10px 0;
- 
-  width: 700px;
+    padding-top: 37px;
+    margin: 10px 0;
+    width: 700px;
   
 }
 input[type=text], select, textarea{
     width: 100%;
- background-color: #d6ebec3b;
+    background-color: #d6ebec00;
     padding: 12px;
     border: none;
-    border-bottom: 2px solid #ccc;
-    border-radius: 4px;
+    border-bottom: 2px solid rgb(204, 204, 204);
+    border-radius: 0;
     box-sizing: border-box;
     resize: vertical;
+    margin-bottom: 5px;
     
-  }
-  label {
+}
+label {
     padding: 12px 12px 12px 0;
     
-  }
-  input[type=submit] {
+}
+.btn_Submit{
     background-color:var(--midnight);
     color: var(--white);
     padding: 12px 70px;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
     float: center;
-  }
-  input[type=submit]:hover{
+    border: 0;
+    border-radius: 0;
+    margin-top: 10px;
+}
+.btn_Submit:hover{
     background-color:rgba(87, 145, 102, 0.603);
 }
-  .col-25 {
+.col-25 {
     float: center;
     width: 25%;
     margin-top: 6px;
-  }
-  .col-75 {
+}
+.col-75 {
     float: left;
     width: 100%;
     margin-top: 6px;
   }
   
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-    padding-bottom: 0.5rem;
-    
+    padding-bottom: 0.5rem;  
   }
 
 @media screen and (max-width:1050px){
@@ -612,13 +615,12 @@ input[type=text], select, textarea{
     }
     .main_container{
         display: flex;
-       flex-direction: row;
-       flex-wrap:nowrap;
-       background: #131a1b;
-       padding-bottom: 2.7rem;
-       
-      
+        flex-direction: row;
+        flex-wrap:nowrap;
+        background: #131a1b;
+        padding-bottom: 2.7rem;
     }
+
     .gallery .image{
         width: calc(94% / 2);
     }
@@ -632,16 +634,17 @@ input[type=text], select, textarea{
     }
     .main_container{
         display: flex;
-       justify-content: center;
-       flex-wrap:wrap;
-       background: #131a1b;
-       padding-bottom: 2.7rem;
-    
+        justify-content: center;
+        flex-wrap:wrap;
+        background: #131a1b;
+        padding-bottom: 2.7rem;
+
     }
     .contact_card{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
@@ -665,10 +668,11 @@ input[type=text], select, textarea{
         padding: 1rem;
         min-width: 40vh
     }
-    .company{
+    .company >* {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start ;
+        padding-left: 0;
        
     }
     .work_card{
@@ -683,11 +687,11 @@ input[type=text], select, textarea{
     }
     .main_container{
         display: flex;
-       justify-content: center;
-       flex-wrap:wrap;
-       background: #131a1b;
-       padding-bottom: 1.7rem;
-       padding: 1rem ;
+        justify-content: center;
+        flex-wrap:wrap;
+        background: #131a1b;
+        padding-bottom: 1.7rem;
+        padding: 1rem ;
     }
    
 }
@@ -731,10 +735,7 @@ input[type=text], select, textarea{
         font-family: var(--Abel);
         font-size: 2vh;
     }
-    h5{
-        font-family: var(--Livvic);
-        font-size: 1vh;
-    }
+
     button.btn{
         border: none;
         border-radius: 2rem;
@@ -744,9 +745,14 @@ input[type=text], select, textarea{
         cursor:pointer;
     }
     p{
-    font-size: 2vh;
+        font-size: 2.5vh;
         font-family: var(--Lexend);
     }
+    span{
+        font-size: 2vh;
+        font-family: var(--Lexend);
+    }
+    
 
     .social_info span{
         font-size: 3vh;
@@ -756,13 +762,19 @@ input[type=text], select, textarea{
     }
     .contact_card div a{
         font-size: 4vh;
-      box-sizing: border-box;
+        box-sizing: border-box;
         padding: 1rem;
     }
     .photo_container{
         grid-template-columns: repeat(1, 1fr);
     }
 
-   
-    
+    .btn_Submit{
+        font-size: .7rem;
+        padding: 10px 20px;
+    }
+
+    .contact_card .social a{
+        padding: 5px;
+    }
 }

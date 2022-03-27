@@ -1,3 +1,27 @@
+<?php
+
+include 'connect.php';
+
+if(isset($_POST['submit2'])){
+    $name = $_POST['name2'];
+    $email = $_POST['email2'];
+    $message = $_POST['message2'];
+
+    $sql = "INSERT INTO communication_post (name, email, message)
+             VALUES ('$name', '$email', '$message')";
+    $result = mysqli_query($conn, $sql);
+    if($result ){
+        echo "<script>alert('Message sent successfully.')</script>";
+    } else{
+        echo "<script>alert('Message does not send .')</script>";
+    }
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -208,7 +232,7 @@
 <div>
     <div class="work_card">
         <div class="company">
-            <span>2018 - 2021</span>
+            <span class="year">2018 - 2021</span>
             <h3>Manager, AS Capital</h3>
         </div>
         <div>
@@ -219,7 +243,7 @@
    
  <div class="work_card">
     <div class="company">
-        <span>2017 - 2018</span>
+        <span class="year">2017 - 2018</span>
         <h3>Consultant, SIA Circle K Latvia</h3>
     </div>
     <div>
@@ -230,7 +254,7 @@
    
     <div class="work_card">
         <div class="company">
-            <span>2016 - 2017</span>
+            <span class="year">2016 - 2017</span>
             <h3>Client consultant, SIA Bite Latvija</h3>
         </div>
         <div>
@@ -322,53 +346,37 @@
         <a href="https://www.linkedin.com/in/irena-zbitkovska-88b473206/" target="_Blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/Irena3Z" target="_Blank"><i class="fa-brands fa-github"></i></a>
     </div>
-</div>
-         <div class="send_message">
-            <form action="api.php?name=subscribe" method="post">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="firstName">Name:</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" id="firstName" name="firstName" placeholder="Your name.." >
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-25">
-                    <label for="email">Email:</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" id="email" name="email" placeholder="Your email.." >
-                  </div>
-                </div>
-        
-                <div class="row">
-                  <div class="col-25">
-                    <label for="subject">Message:</label>
-                  </div>
-                  <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:90px"></textarea>
-                  </div>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="subscription_check">
-                    <label class="form-check-label" for="subscription_check">agree with Privacy Policy</label>
-                  </div>
-                <div class="row">
-                  <input href="#" id="submit" type="submit"  name="submit" value="SEND MESSAGE"  class="Butn_Subm">
-                </div>
-              </form>
-         </div>
     </div>
-   
-    
+    <div class="send_message">
+    <form action="" method="POST" class="form2">
+        <div class="row">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name2" id="name" required> 
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email2" id="email" required> 
+            </div>
+        </div>
+        <div class="input-group textarea">
+            <label for="message">Message:</label>
+            <textarea type="text" name="message2" id="message" required></textarea> 
+        </div>
+        <div class="input-group">
+            <button name="submit2" class="btn_Submit">SEND MESSAGE</button>
+        </div>
+    </form>
+    </div>
+    </div>
+
 </section>
 </main>
 
 
 
 <!------x-----Main Site Section--------x-->
-<script src="./js/Request.js"></script>
+
 <script src="./js/jquery3.6.0.min.js"></script>
 
 <script src="./js/owl.carousel.min.js"></script>
