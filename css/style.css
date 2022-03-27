@@ -1,4 +1,4 @@
-@import url('../css/fonts.css');
+@import url('../public/css/fonts.css');
 
 
 html {
@@ -20,7 +20,6 @@ html, body{
     --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
     --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-
 
     --Abel:'Abel',cursive;
     --Anton:'Anton',cursive;
@@ -180,7 +179,7 @@ main .site-title .btn:hover{
 }
 
 main .blog{
-    background: url(../assets/home/plants.jpg);
+    background: url(../assets/home/flov.jpg);
     background-size: cover;
     width: 100%;
 
@@ -697,6 +696,10 @@ input[type=text], select, textarea{
         padding: 4px;
         width: 100%;
     }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
 }
 
 
@@ -760,10 +763,6 @@ input[type=text], select, textarea{
         grid-template-columns: repeat(1, 1fr);
     }
 
-     .w-1,.w-2,.w-3,.w-4,.w-5,.w-6 {
-        grid-column: span 1;
-        }
-
-        
-    }
+   
+    
 }

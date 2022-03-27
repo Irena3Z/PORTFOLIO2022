@@ -1,6 +1,21 @@
 const toggleCollapse = document.querySelector('.toggle-collapse div')
 const nav = document.querySelector('.nav');
 
+const responsive = {
+    0:{
+        items:1
+    },
+    320:{
+        items:1
+    },
+    560:{
+        items:2
+    },
+    960:{
+        items:3
+    }
+
+}
 
 toggleCollapse.onclick = function(event){
     nav.classList.toggle('collapse');
@@ -12,8 +27,10 @@ $('.owl-carousel').owlCarousel({
     autoplayTimeout:3000,
     dots: false,
     nav: true,
-    navText: [$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')]
+    navText: [$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')],
+    responsive:responsive
 });
+
 
 const gallery = document.querySelectorAll(".gallery .image"),
 previewBox = document.querySelector(".preview-box"),
@@ -94,26 +111,32 @@ const req = new Request();
 req.get('api.php?name=getSubscribers', function (response) {
     for (let subscriber of response.subscribers) {
         printSubscriber(subscriber)
+        
     }
 })
+// const messageButtom = document.querySelector(".Butn_Subm");
+// messageButtom.onclick = function(event){
+//     event.preventDefault()
+//     console.log("tev");
+// }
 
 document.querySelector('form').onsubmit = function(event) {
     event.preventDefault()
-    // if(document.getElementById('subscription_check').checked) {
-    //     const url = this.getAttribute('action')
-    //     let form = this;
-    //     req.post(url, new FormData(this), function (response) {
-    //         if (response.hasOwnProperty('entity')) {
-    //             printSubscriber(response.entity)
-    //             for (let input of form.querySelectorAll('input')) {
-    //                 input.value = ''
-    //                 input.checked = false
-    //             }
-    //             document.getElementById('message').textContent = ''
-    //         }
-    //     })
-    // }
-    // else {
-    //     document.getElementById('message').textContent = "please check the checkbox!"
-    // }
+    
+    if(document.getElementById('subscription_check').checked) {
+        const url = this.getAttribute('action')
+        let form = this;
+        req.post(url, new FormData(this), function (response) {
+            if (response.hasOwnProperty('entity')) {
+                printSubscriber(response.entity)
+                for (let input of form.querySelectorAll('input')) {
+                    input.value = ''
+                    input.checked = false
+                }
+               
+            }
+        })
+        console.log("tev3");
+    }
+  
 }
