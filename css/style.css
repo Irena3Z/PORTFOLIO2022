@@ -237,7 +237,7 @@ main .blog-content .blog-title{
     flex-direction: column;
     text-align: center;
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 6rem 4rem;
 }
 .about_me *{
     color: var(--white);
@@ -413,7 +413,7 @@ section .shadow{
     justify-content: space-around;
     flex-direction: row;
     padding:0 2rem;
-    margin: auto;
+    margin: 0;
     
 }
 .company{
@@ -435,18 +435,26 @@ section .shadow{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    
     padding-bottom: 1rem;
     border-spacing: 20px;
- 
     
+}
+.bacground{
+    background: #000;
+    color: #fff;
+}
+.color{
+    color: coral;
 }
 .work_skills{
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
+}
+.skills{
+margin: 20px 70px;
+    box-sizing: border-box;
 }
 .grid-container{
     margin: 2px auto;
@@ -456,8 +464,13 @@ section .shadow{
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
  
+}
+.two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .grid-item {
     padding: 20px 40px;
@@ -465,6 +478,50 @@ section .shadow{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+}
+.grid-item:hover {
+    background-color: #76cfdfa1;
+
+}
+.grid-item:nth-of-type(odd):hover {
+    background-color: #152c30a1;
+
+}
+.c-1:hover {
+    background-color: rgba(236, 90, 90, 0.808) !important ;
+
+}
+.c-3:hover {
+    background-color: rgba(199, 147, 236, 0.527) !important ;
+
+}
+.c-2:hover {
+    background-color: #f6f88fd8  !important ;
+
+}
+.c-4:hover {
+    background-color: #98eaffc4  !important ;
+
+}
+.c-5:hover {
+    background-color: #a1f88fd8  !important ;
+
+}
+.c-6:hover {
+    background-color: #ec8ff8d8  !important ;
+  
+
+}
+.c-7:hover {
+    background-color: #a18681d8  !important ;
+
+}
+.c-8:hover {
+    background-color: #918ff89c  !important ;
+
+}
+.bacground2{
+    background:linear-gradient(120deg, #90a794 0%, #c2e9fb 100%);
 }
 .cards_position{
     display: flex;
@@ -480,12 +537,12 @@ section .shadow{
     text-align: center;
     margin: 20px;
     border-radius: 7px;
-    box-shadow: 0 35px 35px -20px rgb(0 0 0 / 20%);
+    box-shadow: 10px 35px 35px 20px rgba(0, 0, 0, 0.2);
     contain: 100%;
 }
 
 .card:hover {
-    background-color: #8fd4bc80;
+    background-color: #a4f8d8;
     padding: 7px;
     text-align: center;
     margin: 20px;
@@ -501,7 +558,6 @@ section .shadow{
 
 #contact{
     padding-top: 2rem;
-    margin-top: 2rem;
     padding-left: 2rem;
     background: url(../assets/home/jas.jpg);
     background-size: cover;
@@ -577,22 +633,41 @@ label {
 .btn_Submit:hover{
     background-color:rgba(87, 145, 102, 0.603);
 }
-.col-25 {
-    float: center;
-    width: 25%;
-    margin-top: 6px;
-}
-.col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 6px;
-  }
+
   
 .row:after {
     content: "";
     display: table;
     clear: both;
     padding-bottom: 0.5rem;  
+  }
+
+  footer {
+      background: #131a1b;
+      color: var(--white);
+      padding: 30px 40px;
+  }
+  .footer_position{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  .G_btn{
+    font-family: var(--Anton);
+    font-size: 4vh;
+    padding: 20px 60px; 
+    color: #000;
+    background: var(--white);
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .G_btn:hover{
+    background-color: #a4f8d8;
   }
 
 @media screen and (max-width:1050px){
@@ -623,6 +698,19 @@ label {
 
     .gallery .image{
         width: calc(94% / 2);
+    }
+  
+}
+@media screen and (max-width:930px){
+    .footer_position{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .button_position{
+        padding: 15px 0;
     }
 }
 @media screen and (max-width:910px){
@@ -777,4 +865,9 @@ label {
     .contact_card .social a{
         padding: 5px;
     }
+
+    .G_btn{
+        font-size: .7rem;
+        padding: 10px 20px;
+      }
 }

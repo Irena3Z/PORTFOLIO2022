@@ -103,8 +103,8 @@ if(isset($_POST['submit2'])){
         <img src="./assets/home/IMG_5369.JPEG" alt="my_image" >
     </div>
     <div class="about_me">
-        <h2>Hey I' m
-             Irēna 
+        <h2><b class="c-2">Hey </b>
+             <b class="c-1">I' m Irēna </b>
         </h2>
        
         <h4>Next Front-end Developer</h4>
@@ -228,9 +228,9 @@ if(isset($_POST['submit2'])){
 </section>
 
 <section id="work">
-<h1 class="work_title"> Work Experience </h1>
+<h1 class="work_title">Work <b class="c-1">Experience</b></h1>
 <div>
-    <div class="work_card">
+    <div class="work_card c-3">
         <div class="company">
             <span class="year">2018 - 2021</span>
             <h3>Manager, AS Capital</h3>
@@ -241,42 +241,44 @@ if(isset($_POST['submit2'])){
         </div> 
     </div>
    
- <div class="work_card">
+ <div class="work_card c-2">
     <div class="company">
         <span class="year">2017 - 2018</span>
         <h3>Consultant, SIA Circle K Latvia</h3>
     </div>
     <div>
-        <p>Fast and high-quality customer service. Knowledge of store assortment. Sale of goods.Attracting new customers. Working with cash register</p>
+        <p >Fast and high-quality customer service. Knowledge of store assortment. Sale of goods.Attracting new customers. Working with cash register</p>
 
     </div>
     </div>
    
-    <div class="work_card">
-        <div class="company">
+    <div class="work_card c-5">
+        <div >
             <span class="year">2016 - 2017</span>
             <h3>Client consultant, SIA Bite Latvija</h3>
         </div>
-        <div>
+        <div >
             <p>Answer incoming calls, actively make new calls and reach new customers. To offer the customer additional products and services. Connect new tariff plans.</p>
     
         </div>
     </div>
     
-    <hr>
-   
-    <div class="work_skills">
+  
+   <div class="bacground">
+   <div class="work_skills">
         <div>
-            <h2  class="work_title">Professional skills</h2>
+            <h2  class="work_title"> <b class="color">Professional skills</b></h2>
         </div>
+        <div class="skills">
         <div class="grid-container">
             <h3 class="grid-item">Problem solving</h3>
             <h3 class="grid-item">Adaptability</h3>
-            <h3 class="grid-item">Attention to detail </h3>
+            <h3 class="grid-item c-2">Attention to detail </h3>
             <h3 class="grid-item">Time management</h3>
-            <h3 class="grid-item">Communication</h3>
-            <h3 class="grid-item">Positivity </h3>
+            <h3 class="grid-item c-8">Communication</h3>
+            <h3 class="grid-item c-1">Positivity </h3>
             <h3 class="grid-item">Empathy </h3>
+        </div>
         </div>
     </div>
     <hr>
@@ -284,23 +286,23 @@ if(isset($_POST['submit2'])){
         <div class="work_skills">
             <h2  class="work_title">Hard skills</h2>
         </div>
-        <div class="grid-container">
-            <h3 class="grid-item">HTML</h3>
-            <h3 class="grid-item">CSS</h3>
-            <h3 class="grid-item">JavaScript</h3>
-            <h3 class="grid-item"> PHP</h3>
-                <h3 class="grid-item">MySql</h3>
+        <div class="grid-container two">
+            <h3 class="grid-item c-1">HTML</h3>
+            <h3 class="grid-item c-2">CSS</h3>
+            <h3 class="grid-item c-3">JavaScript</h3>
+            <h3 class="grid-item c-4"> PHP</h3>
+                <h3 class="grid-item c-5">MySql</h3>
 
         </div>
     </div>
-    <hr>
-    <div>
+   </div>
+    <div class="bacground2">
         <div>
             <h2  class="work_title">My project</h2>
         </div>
         <div>
             <div class="cards_position">
-                <div class="card">
+                <div class="card c-4">
                     <a href="https://github.com/Irena3Z/WB-tictactoe" target="_Blank">
                         <img src="assets/home/tict.jpg" alt="game" width="300">
                         <h3>Games</h3>
@@ -309,7 +311,7 @@ if(isset($_POST['submit2'])){
                     </a>
                    
                 </div>
-                <div class="card">
+                <div class="card c-8">
                          
                          <a href="https://github.com/Irena3Z/Wireframes" target="_Blank">
                             <img src="assets/home/wireframes.jpg" alt="" width="300">
@@ -337,9 +339,9 @@ if(isset($_POST['submit2'])){
 <section id="contact">
     <div class="contact_card">
         <div class="social_info">
-            <h1>Get in Touch</h1>
+            <h1>Get in <b class="color"> Touch</b> </h1>
     <p>If you are interested in working together or learn more about me. <br> Then here you can send me an email or search for me on social networks.</p>
-       <span>Write: zbitkovski3@gmail.com</span> 
+       <span class="c-5">Write: zbitkovski3@gmail.com</span> 
        <div class="social text-gray">
         <a href="https://www.facebook.com/irena.3Bit/" target="_Blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.instagram.com/irena_3bit/"><i class="fa-brands fa-instagram"></i></a>
@@ -372,7 +374,16 @@ if(isset($_POST['submit2'])){
 
 </section>
 </main>
-
+<footer>
+    <div class="footer_position">
+        <div>
+            <p>This is my first home site , I will be pleased if you leave a comment !</p>
+        </div>
+        <div class="button_position">
+            <a href="./CommentBox.php" target="_blank" rel="" class="G_btn">GO TO COMMENTS</a>
+        </div>
+    </div>
+</footer>
 
 
 <!------x-----Main Site Section--------x-->
