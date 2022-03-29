@@ -194,10 +194,10 @@ if(isset($_POST['submit2'])){
           <div class="image"><span><img src="assets/GalleryForPort/winter.JPG" alt=""></span></div>
           <div class="image"><span><img src="assets/GalleryForPort/Butterfly.JPG" alt=""></span></div>
           <div class="image"><span><img src="assets/GalleryForPort/CZ.JPG" alt=""></span></div>
-          <div class="image"><span><img src="assets/GalleryForPort/bee.JPG" alt=""></span></div>
-          <div class="image"><span><img src="assets/GalleryForPort/horse.JPEG" alt=""></span></div>
-          <div class="image"><span><img src="assets/GalleryForPort/animal.JPG" alt=""></span></div>
-          <div class="image"><span><img src="assets/GalleryForPort/fish.jpg" alt=""></span></div>
+          <div class="image"><span><img src="assets/GalleryForPort/22.JPG" alt=""></span></div>
+          <div class="image"><span><img src="assets/GalleryForPort/5.JPG" alt=""></span></div>
+          <div class="image"><span><img src="assets/GalleryForPort/11.JPG" alt=""></span></div>
+          <div class="image"><span><img src="assets/GalleryForPort/1.jpg" alt=""></span></div>
           <div class="image"><span><img src="assets/GalleryForPort/au.JPG" alt=""></span></div>
           
         </div>
@@ -253,7 +253,7 @@ if(isset($_POST['submit2'])){
     </div>
    
     <div class="work_card c-5">
-        <div >
+        <div class="company">
             <span class="year">2016 - 2017</span>
             <h3>Client consultant, SIA Bite Latvija</h3>
         </div>

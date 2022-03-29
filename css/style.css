@@ -303,7 +303,7 @@ section .container .owl-nav{
 }
 .gallery .image{
     padding: 7px;
-    width: calc(94% / 3) ;
+    width: calc(94% / 5) ;
 }
 .gallery .image img{
     width: 100% ;
@@ -640,21 +640,21 @@ label {
     display: table;
     clear: both;
     padding-bottom: 0.5rem;  
-  }
+}
 
-  footer {
-      background: #131a1b;
-      color: var(--white);
-      padding: 30px 40px;
-  }
-  .footer_position{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
-  }
-  .G_btn{
+footer {
+    background: #131a1b;
+    color: var(--white);
+    padding: 30px 40px;
+}
+.footer_position{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.G_btn{
     font-family: var(--Anton);
     font-size: 4vh;
     padding: 20px 60px; 
@@ -665,10 +665,10 @@ label {
     border: 0;
     border-radius: 5px;
     margin-top: 10px;
-  }
-  .G_btn:hover{
+}
+.G_btn:hover{
     background-color: #a4f8d8;
-  }
+}
 
 @media screen and (max-width:1050px){
     
@@ -697,9 +697,13 @@ label {
     }
 
     .gallery .image{
-        width: calc(94% / 2);
+        width: calc(95% / 3);
     }
-  
+    .company >* {
+        display: flex;
+        flex-direction: column;
+        justify-content: start ;
+        padding-left: 0;
 }
 @media screen and (max-width:930px){
     .footer_position{
@@ -711,6 +715,9 @@ label {
     }
     .button_position{
         padding: 15px 0;
+    }
+    .gallery .image{
+        width: calc(93% / 3);
     }
 }
 @media screen and (max-width:910px){
@@ -783,10 +790,16 @@ label {
     }
    
 }
+@media screen and (max-width:650px){
+    .gallery .image{
+        width: calc(93% / 2);
+    }
+
+}
 @media screen and (max-width:500px){
     .gallery .image{
         padding: 4px;
-        width: 100%;
+        width: 95%;
     }
 
     nav .toggle-collapse{
@@ -869,5 +882,5 @@ label {
     .G_btn{
         font-size: .7rem;
         padding: 10px 20px;
-      }
+    }
 }
