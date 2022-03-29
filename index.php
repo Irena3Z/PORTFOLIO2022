@@ -263,8 +263,8 @@ if(isset($_POST['submit2'])){
         </div>
     </div>
     
-  
-   <div class="bacground">
+<hr>
+<br>
    <div class="work_skills">
         <div>
             <h2  class="work_title"> <b class="color">Professional skills</b></h2>
@@ -295,7 +295,7 @@ if(isset($_POST['submit2'])){
 
         </div>
     </div>
-   </div>
+  
     <div class="bacground2">
         <div>
             <h2  class="work_title">My project</h2>
